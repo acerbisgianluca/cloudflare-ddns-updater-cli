@@ -1,0 +1,64 @@
+{
+  "name": "cloudflare-ddns-updater-cli",
+  "version": "1.0.0",
+  "description": "Cloudflare DDNS CLI: Effortlessly manage DNS with automatic updates through this command-line tool. Set it up, sit back, and enjoy hassle-free dynamic DNS using Cloudflare!",
+  "main": "bundle/index.js",
+  "bin": {
+    "cf-ddns": "./bundle/index.js",
+    "cloudflare-ddns": "./bundle/index.js"
+  },
+  "files": [
+    "bundle/*.js"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prebundle": "rimraf bundle",
+    "bundle": "ncc build src/index.ts -o bundle -m -s -t --target es2021",
+    "lint": "eslint src test --fix --ext .ts",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acerbisgianluca/cloudflare-ddns-updater-cli.git"
+  },
+  "keywords": [
+    "cloudflare",
+    "ddns",
+    "dns",
+    "nodejs",
+    "typescript",
+    "commanderjs"
+  ],
+  "author": "Acerbis Gianluca",
+  "license": "GPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/acerbisgianluca/cloudflare-ddns-updater-cli/issues"
+  },
+  "homepage": "https://github.com/acerbisgianluca/cloudflare-ddns-updater-cli#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@changesets/types": "^5.2.1",
+    "@commander-js/extra-typings": "^11.0.0",
+    "@tsconfig/node16": "^16.1.0",
+    "@types/jest": "^29.5.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "@vercel/ncc": "^0.36.1",
+    "axios": "^1.4.0",
+    "commander": "^11.0.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.2",
+    "prettier": "^3.0.2",
+    "rimraf": "^5.0.1",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.1.6"
+  }
+}
