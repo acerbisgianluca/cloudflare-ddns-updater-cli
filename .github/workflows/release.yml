@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Run test
-        run: npm test
+        run: npm test -- --coverage
         env:
           CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
 
