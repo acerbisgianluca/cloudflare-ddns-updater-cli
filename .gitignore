@@ -12,3 +12,6 @@ dist/
 
 # Bundler output directory
 bundle/
+
+# Test
+coverage/
