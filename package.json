@@ -1,6 +1,6 @@
 {
   "name": "cloudflare-ddns-updater-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cloudflare DDNS CLI: Effortlessly manage DNS with automatic updates through this command-line tool. Set it up, sit back, and enjoy hassle-free dynamic DNS using Cloudflare!",
   "main": "bundle/index.js",
   "bin": {
